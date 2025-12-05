@@ -185,7 +185,7 @@ figure.image img {
   border-radius: 12px;
 }
 .gradient-background {
-  background-image: url("https://pic.rmb.bdstatic.com/bjh/down/8af4019f707fcaab25aedac9bca313b4.jpeg");
+  background-image: url("/assets/img/background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
