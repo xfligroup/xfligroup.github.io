@@ -185,7 +185,7 @@ figure.image img {
   border-radius: 12px;
 }
 .gradient-background {
-  background-image: url("https://www.neu.edu.cn/images/idx/img3-2.png");
+  background-image: url("/assets/img/background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
