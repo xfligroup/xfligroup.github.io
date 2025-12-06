@@ -49,6 +49,10 @@
                     <strong>团队</strong>
                 </a>
             
+                <a class="navbar-item " href="/posts">
+                    <strong>Post</strong>
+                </a>
+            
                 <a class="navbar-item " href="/research">
                     <strong>研究</strong>
                 </a>
@@ -208,6 +212,39 @@
     </div>
   </div>
 
+
+<script>
+// 等待页面DOM内容加载完毕后再执行
+document.addEventListener('DOMContentLoaded', function() {
+  // 1. 获取所有标签项和内容块
+  const tabs = document.querySelectorAll('#tabs li'); // 所有标签按钮
+  const tabContents = document.querySelectorAll('.tab-content'); // 所有内容区块
+
+  // 2. 为每个标签按钮绑定点击事件
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetTabId = tab.getAttribute('data-tab'); // 获取点击标签对应的内容块ID，例如“professor”
+
+      // 3. 移除所有标签的激活状态，隐藏所有内容块
+      tabs.forEach(t => t.classList.remove('is-active'));
+      tabContents.forEach(content => {
+        content.style.display = 'none';
+      });
+
+      // 4. 激活当前点击的标签，显示对应的内容块
+      tab.classList.add('is-active');
+      const activeContent = document.getElementById(targetTabId);
+      if (activeContent) {
+        activeContent.style.display = 'block';
+      }
+    });
+  });
+
+  // （可选）页面加载后，可以触发一次点击来确保状态正确，但这通常不是必须的。
+  // 例如，如果你想在加载时默认激活“lecturer”标签，可以取消下面这行的注释：
+  // document.querySelector('[data-tab="lecturer"]').click();
+});
+</script>
         </div>
         <footer class="footer">
   <div class="has-text-centered">
